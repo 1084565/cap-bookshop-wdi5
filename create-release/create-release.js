@@ -11,9 +11,9 @@ const dateFormat = require('date-and-time')
 // user and password are exposed with a trailing
 // '_user' and '_password'.
 var githubToken = process.env.GITHUB_TOKEN_password;
-var releaseNamePrefix = process.env.RELEASE_NAME_PREFIX;
-var releaseTagPrefix = process.env.RELEASE_TAG_PREFIX;
-var additionalAssetLabel = process.env.ADDITIONAL_ASSET_LABEL
+var releaseNamePrefix = process.env.RELEASE_NAME_PREFIX || 'release'
+var releaseTagPrefix = process.env.RELEASE_TAG_PREFIX || 'v'
+var additionalAssetLabel = process.env.ADDITIONAL_ASSET_LABEL || 'build-result'
 
 // CLOUDCI_GIT_COMMIT is not defined as additional environment variable
 // for the stage. CLOUDCI_GIT_COMMIT is always injected into the environment
