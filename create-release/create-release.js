@@ -36,12 +36,9 @@ var releaseSuffix = dateFormat.format(new Date(), 'YYYY-MM-DD-HH-mm-ss')
 // 4: repo
 var gitRepoUrlParts = process.env.GIT_URL.match(/(.*):\/\/(.*)\/(.*)\/([^\.]*)(\.git)?$/)
 
-console.log(process.env.GIT_URL);
-console.log(gitRepoUrlParts);
-
-
 // gh enterprise: var githubApiUrl=`${gitRepoUrlParts[1]}://${gitRepoUrlParts[2]}/api/v3/`
-var githubApiUrl=`${gitRepoUrlParts[1]}://api/${gitRepoUrlParts[2]}/`
+var githubApiUrl=`${gitRepoUrlParts[1]}://api.${gitRepoUrlParts[2]}/`
+console.log(githubApiUrl);
 var owner=gitRepoUrlParts[3]
 var repo=gitRepoUrlParts[4]
 
