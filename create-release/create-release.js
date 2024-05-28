@@ -40,7 +40,8 @@ console.log(process.env.GIT_URL);
 console.log(gitRepoUrlParts);
 
 
-var githubApiUrl=`${gitRepoUrlParts[1]}://${gitRepoUrlParts[2]}/api/v3/`
+// gh enterprise: var githubApiUrl=`${gitRepoUrlParts[1]}://${gitRepoUrlParts[2]}/api/v3/`
+var githubApiUrl=`${gitRepoUrlParts[1]}://api/${gitRepoUrlParts[2]}/`
 var owner=gitRepoUrlParts[3]
 var repo=gitRepoUrlParts[4]
 
