@@ -9,7 +9,7 @@ https://developers.sap.com/tutorials/cicd-wdi5-cap.html
 
 ## Requirements & Installation
 
-Refer to the prerequisites in the SAP tutorial above!
+Refer to the prerequisites in the SAP tutorial above
 
 ## Known Issues
 
