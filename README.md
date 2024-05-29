@@ -9,11 +9,11 @@ https://developers.sap.com/tutorials/cicd-wdi5-cap.html
 
 ## Requirements & Installation
 
-Refer to the prerequisites in the SAP tutorial above.
+Refer to the prerequisites in the SAP tutorial above!
 
 ## Known Issues
 
-No known issues!
+No known issues.
 
 ## How to obtain support
 [Create an issue](https://github.com/SAP-samples/cap-bookshop-wdi5/issues) in this repository if you find a bug or have questions about the content.
