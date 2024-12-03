@@ -16,7 +16,9 @@ wget $JRE_URL
 tar -xzf $JRE_TAR
 rm $JRE_TAR
 
-export JAVA_HOME=$(pwd)/jdk-11
+ls -lah
+
+export JAVA_HOME=$(pwd)/sapmachine-jre-21.0.5_linux-x64_bin
 export PATH=$JAVA_HOME/bin:$PATH
 
 # echo "Installing Java Runtime Environment..."
