@@ -21,18 +21,20 @@ ls -lah
 export JAVA_HOME=$(pwd)/sapmachine-jre-21.0.5_linux-x64_bin
 export PATH=$JAVA_HOME/bin:$PATH
 
+ls -lah $JAVA_HOME
+
 # echo "Installing Java Runtime Environment..."
 # sudo apt-get update
 # sudo apt-get install -y openjdk-11-jre
 
 echo "Java installation completed."
-java -version
+$JAVA_HOME/bin/java -version
 }
 
 # Function to download the Black Duck Detect script
 download_detect_tool() {
 echo "Downloading Black Duck Detect tool..."
-DETECT_URL="https://detect.synopsys.com/detect.sh" # Official Detect download URL
+DETECT_URL="https://detect.synopsys.com/detect9.sh" # Official Detect download URL
 wget $DETECT_URL -O detect.sh
 chmod +x detect.sh
 echo "Black Duck Detect tool downloaded."
