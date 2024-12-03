@@ -6,13 +6,11 @@ set -e
 install_jre() {
 
 
-JRE_VERSION="sapmachine-jre-21.0.5" # You can change this to the desired version
-JRE_TAR="${JRE_VERSION}_linux-x64_bin.tar.gz"
+JRE_VERSION="21.0.5" # You can change this to the desired version
+JRE_TAR="sapmachine-jre-${JRE_VERSION}_linux-x64_bin.tar.gz"
 # resolves to https://github.com/SAP/SapMachine/releases/download/sapmachine-21.0.5/sapmachine-jre-21.0.5_linux-x64_bin.tar.gz
-JRE_URL="https://github.com/SAP/SapMachine/releases/download/$JRE_VERSION/$JRE_TAR"
-
+JRE_URL="https://github.com/SAP/SapMachine/releases/download/sapmachine-$JRE_VERSION/$JRE_TAR"
 echo "Downloading and installing sapmachine at ... " $JRE_URL
-
 
 wget $JRE_URL
 tar -xzf $JRE_TAR
