@@ -6,9 +6,10 @@ set -e
 install_jre() {
 echo "Downloading and installing OpenJDK..."
 
-JRE_VERSION="11.0.12" # You can change this to the desired version
-JRE_TAR="openjdk-${JRE_VERSION}_linux-x64_bin.tar.gz"
-JRE_URL="https://download.java.net/openjdk/jdk11/ri/$JRE_TAR"
+JRE_VERSION="sapmachine-jre-21.0.5" # You can change this to the desired version
+JRE_TAR="${JRE_VERSION}_linux-x64_bin.tar.gz"
+# resolves to https://github.com/SAP/SapMachine/releases/download/sapmachine-21.0.5/sapmachine-jre-21.0.5_linux-x64_bin.tar.gz
+JRE_URL="https://github.com/SAP/SapMachine/releases/download/$JRE_VERSION/$JRE_TAR"
 
 wget $JRE_URL
 tar -xzf $JRE_TAR
