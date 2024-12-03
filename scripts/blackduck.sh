@@ -4,9 +4,23 @@ set -e
 
 # Function to install JRE
 install_jre() {
-echo "Installing Java Runtime Environment..."
-sudo apt-get update
-sudo apt-get install -y openjdk-11-jre
+echo "Downloading and installing OpenJDK..."
+
+JRE_VERSION="11.0.12" # You can change this to the desired version
+JRE_TAR="openjdk-${JRE_VERSION}_linux-x64_bin.tar.gz"
+JRE_URL="https://download.java.net/openjdk/jdk11/ri/$JRE_TAR"
+
+wget $JRE_URL
+tar -xzf $JRE_TAR
+rm $JRE_TAR
+
+export JAVA_HOME=$(pwd)/jdk-11
+export PATH=$JAVA_HOME/bin:$PATH
+
+# echo "Installing Java Runtime Environment..."
+# sudo apt-get update
+# sudo apt-get install -y openjdk-11-jre
+
 echo "Java installation completed."
 java -version
 }
