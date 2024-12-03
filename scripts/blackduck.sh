@@ -18,7 +18,7 @@ rm $JRE_TAR
 
 ls -lah
 
-export JAVA_HOME=$(pwd)/sapmachine-jre-21.0.5_linux-x64_bin
+export JAVA_HOME=$(pwd)/sapmachine-jre-21.0.5
 export PATH=$JAVA_HOME/bin:$PATH
 
 ls -lah $JAVA_HOME
