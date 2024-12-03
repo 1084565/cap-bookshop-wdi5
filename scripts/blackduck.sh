@@ -23,10 +23,6 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 ls -lah $JAVA_HOME
 
-# echo "Installing Java Runtime Environment..."
-# sudo apt-get update
-# sudo apt-get install -y openjdk-11-jre
-
 echo "Java installation completed."
 $JAVA_HOME/bin/java -version
 }
@@ -43,7 +39,8 @@ echo "Black Duck Detect tool downloaded."
 # Function to run Black Duck scan
 run_blackduck_scan() {
 echo "Running Black Duck scan..."
-./detect.sh --blackduck.url="https://your-blackduck-server" --blackduck.api.token="YOUR_API_TOKEN" --detect.project.name="your-project-name" --detect.project.version.name="your-version-name"
+
+./detect.sh --blackduck.url="$BD_SERVER" --blackduck.api.token="$BD_API_TOKEN" --detect.project.name="your-project-name" --detect.project.version.name="your-version-name"
 echo "Black Duck scan completed."
 }
 
