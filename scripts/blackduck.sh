@@ -1,5 +1,8 @@
 #!/bin/bash
-set -e
+set -eu
+
+# Runs Black Duck scan in current directory after downloading java 
+# and synosys detect script.
 
 JRE_VERSION="21.0.5" 
 JRE_TAR="sapmachine-jre-${JRE_VERSION}_linux-x64_bin.tar.gz"
@@ -31,7 +34,7 @@ download_detect_tool() {
 run_blackduck_scan() {
   echo "Running Black Duck scan..."
 
-  ./detect.sh --blackduck.url="$BD_SERVER" --blackduck.api.token="$BD_API_TOKEN" --detect.project.name="your-project-name" --detect.project.version.name="your-version-name"
+  ./detect.sh --blackduck.url="$BD_SERVER" --blackduck.api.token="$BD_API_TOKEN" --detect.project.name="$BD_PROJECT_NAME" --detect.project.version.name="$BD_PROJECT_VERSION"
   echo "Black Duck scan completed."
 }
 
