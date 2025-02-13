@@ -8,7 +8,7 @@ JRE_VERSION="21.0.5"
 JRE_TAR="sapmachine-jre-${JRE_VERSION}_linux-x64_bin.tar.gz"
 JRE_URL="https://github.com/SAP/SapMachine/releases/download/sapmachine-$JRE_VERSION/$JRE_TAR"
 
-DETECT_URL="https://detect.synopsys.com/detect10.sh" # Official Detect download URL
+DETECT_URL="https://detect.blackduck.com/detect10.sh" # Official Detect download URL
 
 install_jre() {
   echo "Downloading and installing sapmachine from " $JRE_URL
